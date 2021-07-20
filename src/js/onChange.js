@@ -45,7 +45,7 @@ export const onChange = e => {
             }
             if (len > 10) {
                 createList({ error: ' ' }); //для вывода ошибки на экран
-                Notiflix.Notify.info(consts.INFO_MESSAGE);
+                Notiflix.Notify.info(refs.INFO_MESSAGE);
             }
         })  
         .catch(e => console.log(e));
@@ -54,7 +54,7 @@ export const onChange = e => {
 const createList = (obj) => {
     if (obj.error) {
       refs.countryList.innerHTML = `<li class="country-list__item">${obj.error}</li>`;
-        refs.countryInfo.innerHTML = '<p></p>';
+        refs.countryInfo.innerHTML = '<p> </p>';
         return;
     }
       refs.countryList.innerHTML = obj.map(el => listTpl(el)).join('');

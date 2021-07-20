@@ -16,3 +16,12 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  list-style-type: none;
+
+  &__image {
+    width: 25px;
+    height: 100%;
+  }
+}
