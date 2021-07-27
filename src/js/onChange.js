@@ -8,10 +8,11 @@ import Notiflix from "notiflix";
 export const onChange = e => {
     let inputValue;
     if (!e.srcElement.value) {
-        inputValue = e.target.textContent.value.trim()
+        inputValue = e.target.textContent.trim()
     } else {
         inputValue = e.srcElement.value.trim();
     }
+
     for (let i = 0; i < inputValue.length; i++) {
         if (parseInt(inputValue[i])) {
             Notiflix.Notify.failure(refs.FAILURE_MESSAGE);

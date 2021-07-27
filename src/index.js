@@ -3,7 +3,7 @@ import { refs } from './js/refs'
 import API from './js/fetchCountries';
 import _debounce from '../node_modules/lodash.debounce';
 import { onChange } from "./js/onChange";
-import { copyItemDblClick } from "./js/copyItemClick";
+import { copyItemClick } from "./js/copyItemClick";
 
 
 refs.searchBox.addEventListener('input', _debounce((e) => {
